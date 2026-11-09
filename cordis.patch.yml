@@ -1,0 +1,8 @@
+# dsh bundle patch：把本插件插入 profile 的 cordis layer stack。
+#
+# 顶层必须是「patch 条目数组」，每条只有 insert / 其它 patch 动作。
+# - id：loader 行身份，可任意命名（与包名区分）。
+# - name：必须是包名，loader 用它去 require 本包的 host 入口（package.json 的 main）。
+- insert:
+    - id: session-board
+      name: dsh-session-board
